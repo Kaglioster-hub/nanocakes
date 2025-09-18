@@ -52,7 +52,7 @@ export async function POST(req) {
   const business = process.env.PAYPAL_BUSINESS || process.env.PAYPAL_BUSINESS_EMAIL;
 
   if (!business) {
-    return new Response(JSON.stringify({ ok:false, error:"PAYPAL_BUSINESS(MERCHANT_ID) non configurato" }), { status: 200 });
+    return new Response(JSON.stringify({ ok:false, error:"PAYPAL_BUSINESS(MERCHANT_ID)" }), { status: 200 });
   }
 
   const params = new URLSearchParams({

@@ -1,9 +1,16 @@
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+function parseRecipients() {
+  const env = process.env.MAIL_RECIPIENTS || "fabry15.98@tiscali.it,nanocakes@vrabo.it";
+  return env.split(",").map(s => s.trim()).filter(Boolean);
+}
+
 export async function POST(req) {
   const data = await req.json();
-  const admin = process.env.ADMIN_EMAIL || "nanocakes@vrabo.it";
+  const recipients = parseRecipients();
+  const fromAddr = process.env.ADMIN_EMAIL || recipients[0];
+
   const { items = [], deliveryFee = 0, address = "", cap = "", method = "", txhash = "" } = data || {};
   const total = items.reduce((a,b)=>a + (b.price * (b.qty||1)), 0) + (deliveryFee||0);
 
@@ -26,7 +33,7 @@ export async function POST(req) {
         <p><b>Totale:</b> € ${total.toFixed(2)}</p>
         ${txhash ? `<p><b>TX Hash:</b> ${txhash}</p>` : ""}
       `;
-      await transporter.sendMail({ from: admin, to: admin, subject: "Nuovo ordine NanoCakes", html });
+      await transporter.sendMail({ from: fromAddr, to: recipients, subject: "Nuovo ordine – NanoCakes", html });
     }
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
   } catch (e) {

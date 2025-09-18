@@ -10,7 +10,7 @@ export default function Footer() {
           <h4 className="font-semibold mb-2">Contatti</h4>
           <ul className="space-y-1 opacity-90">
             <li>Email: <a href="mailto:nanocakes@vrabo.it" className="underline">nanocakes@vrabo.it</a></li>
-            <li>WhatsApp/Tel: <a href="tel:+393800000000" className="underline">+39 380 000 0000</a></li>
+            <li>WhatsApp/Tel: <a href="tel:+393805834799" className="underline">+39 380 583 4799</a></li>
           </ul>
         </div>
         <div>

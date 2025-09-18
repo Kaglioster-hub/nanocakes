@@ -1,6 +1,6 @@
 export const metadata = {
   title: "NanoCakes – Dolci artigianali con consegna",
-  description: "Torte della tradizione rivisitate, ingredienti e allergeni chiari, consegna a domicilio Roma Nord.",
+  description: "Torte della tradizione rivisitate da Nanocakes, con ingredienti e allergeni chiari, consegna a domicilio Roma Nord (per verificare la consegna al tuo indirizzo, segnala tramite il form il tuo cap o la zona al momento della compilazione dell'ordine nel carrello).",
   themeColor: "#3E2723",
   icons: { icon: "/favicon.png" }
 };

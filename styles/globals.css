@@ -23,3 +23,21 @@ body {
   @apply bg-white/80 backdrop-blur rounded-xl shadow-soft border border-white/30;
 }
 
+/* —–– Font utilities per brand/titoli —–– */
+:root{
+  --nc-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --nc-script: "Great Vibes", cursive;
+}
+.font-nc-serif{ font-family: var(--nc-serif); }
+.font-nc-script{ font-family: var(--nc-script); letter-spacing:.5px; }
+
+/* Marchio compatto (logo sopra, scritta sotto) */
+.brand-stack{
+  @apply flex flex-col items-center justify-center select-none;
+}
+.brand-logo{
+  @apply w-14 h-14 md:w-16 md:h-16 object-contain mb-1 rounded-full border border-white/60 shadow-soft;
+}
+.brand-text{
+  @apply text-2xl md:text-3xl leading-none;
+}

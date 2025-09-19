@@ -152,7 +152,7 @@ export default function Page() {
                   </div>
                 )}
                 <button className="btn px-4 py-2" onClick={doCheckout}>Conferma e paga</button>
-                <p className="text-xs opacity-70">Assistenza: <a className="underline" href="mailto:nanocakes@vrabo.it">nanocakes@vrabo.it</a> · +39 380 000 0000</p>
+                <p className="text-xs opacity-70">Assistenza: <a className="underline" href="mailto:nanocakes@vrabo.it">nanocakes@vrabo.it</a> · +39 380 583 4799</p>
               </div>
             </div>
           </div>
